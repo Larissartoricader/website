@@ -43,7 +43,9 @@ export const StyledListItemButton = styled(ListItemButton)``;
 
 export const StyledListItemText = styled(ListItemText)`
   color: var(--primary-fontcolor);
-  font-size: var(--font-size-large);
+
+  span {
+    font-size: 1.5rem !important; 
 `;
 
 export const StyledMenuIcon = styled(MenuIcon)`
