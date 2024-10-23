@@ -1,10 +1,17 @@
+import Image from "next/image";
 import Navigation from "../Navigation/Navigation";
-import { HeaderContainer, HeaderNaming } from "./Header.styles";
+import { HeaderContainer } from "./Header.styles";
+import LSClogo from "@/assets/LSClogo.png";
 
 export default function Header() {
   return (
     <HeaderContainer>
-      <HeaderNaming>Larissa Sartori-Cader</HeaderNaming>
+      <Image
+        src={LSClogo}
+        alt={"Larissa Sartori-Cader"}
+        width={250}
+        height={125}
+      />
       <Navigation />
     </HeaderContainer>
   );
