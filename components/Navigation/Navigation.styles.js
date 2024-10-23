@@ -39,13 +39,18 @@ export const StyledList = styled(List)`
   }
 `;
 
-export const StyledListItemButton = styled(ListItemButton)``;
+export const StyledListItemButton = styled(ListItemButton)`
+  &:hover {
+    border: 1px solid White;
+    border-radius: 50%;
+  }
+`;
 
 export const StyledListItemText = styled(ListItemText)`
   color: var(--primary-fontcolor);
-
   span {
-    font-size: 1.5rem !important; 
+    font-size: var(--font-size-large) !important;
+  }
 `;
 
 export const StyledMenuIcon = styled(MenuIcon)`
