@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import { ClearSharp } from "@mui/icons-material";
 import { Box, List, ListItemButton, ListItemText } from "@mui/material";
+import Image from "next/image";
 
 export const StyledBox = styled(Box)`
   background: rgb(34, 0, 36);
@@ -23,6 +24,17 @@ export const StyledCross = styled(ClearSharp)`
     border: 1px solid White;
     border-radius: 50%;
   }
+`;
+
+export const StyledImageBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const StyledImage = styled(Image)`
+  border: solid 1px hotpink;
+  position: absolute;
+  right: 0px;
 `;
 
 export const StyledList = styled(List)`
