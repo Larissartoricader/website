@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import { ClearSharp } from "@mui/icons-material";
-import { Box, ListItemText } from "@mui/material";
+import { Box, List, ListItemButton, ListItemText } from "@mui/material";
 
 export const StyledBox = styled(Box)`
   background: rgb(34, 0, 36);
@@ -18,15 +18,32 @@ export const StyledCross = styled(ClearSharp)`
   right: 50px;
   top: 20px;
   z-index: 1;
-  cursos: pointer;
+  cursor: pointer;
   &:hover {
     border: 1px solid White;
     border-radius: 50%;
   }
 `;
 
+export const StyledList = styled(List)`
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  @media (min-width: 768px) {
+    left: 50px;
+    top: 50px;
+  }
+  @media (min-width: 1024px) {
+    left: 100px;
+    top: 100px;
+  }
+`;
+
+export const StyledListItemButton = styled(ListItemButton)``;
+
 export const StyledListItemText = styled(ListItemText)`
   color: var(--primary-fontcolor);
+  font-size: var(--font-size-large);
 `;
 
 export const StyledMenuIcon = styled(MenuIcon)`

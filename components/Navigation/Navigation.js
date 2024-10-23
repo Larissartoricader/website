@@ -10,6 +10,8 @@ import { useState } from "react";
 import {
   StyledBox,
   StyledCross,
+  StyledList,
+  StyledListItemButton,
   StyledListItemText,
   StyledMenuIcon,
 } from "./Navigation.styles";
@@ -40,20 +42,20 @@ export default function Navigation() {
           toogleNavigation(false);
         }}
       />
-      <List>
+      <StyledList>
         {NavigationMenuItems.map((menuItem) => (
           <ListItem key={menuItem.id} disablePadding>
-            <ListItemButton
+            <StyledListItemButton
               onClick={() => {
                 router.push(menuItem.url);
                 toogleNavigation(false);
               }}
             >
               <StyledListItemText primary={menuItem.name} />
-            </ListItemButton>
+            </StyledListItemButton>
           </ListItem>
         ))}
-      </List>
+      </StyledList>
     </StyledBox>
   );
 
