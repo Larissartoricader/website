@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { StyledMenuIcon } from "./Navigation.styles";
+import { StyledCross, StyledMenuIcon } from "./Navigation.styles";
 
 export default function Navigation() {
   const NavigationMenuItems = [
@@ -31,6 +31,11 @@ export default function Navigation() {
       role="presentation"
       onClick={toogleNavigation(false)}
     >
+      <StyledCross
+        onClick={() => {
+          toogleNavigation(false);
+        }}
+      />
       <List>
         {NavigationMenuItems.map((menuItem) => (
           <ListItem key={menuItem.id} disablePadding>

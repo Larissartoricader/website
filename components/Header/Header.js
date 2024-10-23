@@ -9,8 +9,8 @@ export default function Header() {
       <Image
         src={LSClogo}
         alt={"Larissa Sartori-Cader"}
-        width={250}
-        height={125}
+        width={300}
+        height={150}
       />
       <Navigation />
     </HeaderContainer>
