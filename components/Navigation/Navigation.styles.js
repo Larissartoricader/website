@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import { ClearSharp } from "@mui/icons-material";
 import { Box, List, ListItemButton, ListItemText } from "@mui/material";
@@ -40,9 +40,12 @@ export const StyledList = styled(List)`
 `;
 
 export const StyledListItemButton = styled(ListItemButton)`
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
   &:hover {
-    border: 1px solid White;
-    border-radius: 50%;
+    transform: scale(1.05); /* Expande ligeiramente o item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
   }
 `;
 
