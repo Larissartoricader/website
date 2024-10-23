@@ -1,5 +1,4 @@
 import {
-  Box,
   Drawer,
   List,
   ListItem,
@@ -8,7 +7,12 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { StyledCross, StyledMenuIcon } from "./Navigation.styles";
+import {
+  StyledBox,
+  StyledCross,
+  StyledListItemText,
+  StyledMenuIcon,
+} from "./Navigation.styles";
 
 export default function Navigation() {
   const NavigationMenuItems = [
@@ -26,8 +30,8 @@ export default function Navigation() {
   };
 
   const NavigationList = (
-    <Box
-      sx={{ width: 1000 }}
+    <StyledBox
+      sx={{ width: "100vw", height: "100vh" }}
       role="presentation"
       onClick={toogleNavigation(false)}
     >
@@ -45,18 +49,18 @@ export default function Navigation() {
                 toogleNavigation(false);
               }}
             >
-              <ListItemText primary={menuItem.name} />
+              <StyledListItemText primary={menuItem.name} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
-    </Box>
+    </StyledBox>
   );
 
   return (
     <>
       <StyledMenuIcon onClick={toogleNavigation(true)}>Open</StyledMenuIcon>
-      <Drawer open={open} onClose={toogleNavigation(false)}>
+      <Drawer anchor={"right"} open={open} onClose={toogleNavigation(false)}>
         {NavigationList}
       </Drawer>
     </>
