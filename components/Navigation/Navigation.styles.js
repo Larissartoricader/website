@@ -14,15 +14,16 @@ export const StyledBox = styled(Box)`
 `;
 
 export const StyledCross = styled(ClearSharp)`
-  color: white;
+  color: #bc00ff;
+  background-color: white;
+  border-radius: 50%;
   position: absolute;
   right: 50px;
   top: 20px;
   z-index: 1;
   cursor: pointer;
   &:hover {
-    border: 1px solid White;
-    border-radius: 50%;
+    border: 1px solid #bc00ff;
   }
 `;
 
@@ -32,9 +33,15 @@ export const StyledImageBox = styled.div`
 `;
 
 export const StyledImage = styled(Image)`
-  border: solid 1px hotpink;
   position: absolute;
-  right: 0px;
+  display: none;
+  right: 0;
+  @media (min-width: 1024px) {
+    display: block;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 export const StyledList = styled(List)`

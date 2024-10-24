@@ -12,6 +12,7 @@ import {
   StyledMenuIcon,
 } from "./Navigation.styles";
 import Marketing from "@/assets/Marketing.png";
+import Development from "@/assets/development.png";
 
 export default function Navigation() {
   const NavigationMenuItems = [
@@ -24,8 +25,8 @@ export default function Navigation() {
     {
       id: 2,
       name: "Development",
-      url: "./marketing",
-      src: "../assets/Marketing.png",
+      url: "./development",
+      src: "../assets/development.png",
     },
     {
       id: 3,
@@ -60,7 +61,8 @@ export default function Navigation() {
         }}
       />
       <StyledImageBox>
-        <StyledImage src={Marketing} width={550} alt={"text"} />
+        <StyledImage src={Marketing} alt={"text"} />
+
         <StyledList>
           {NavigationMenuItems.map((menuItem) => (
             <ListItem key={menuItem.id} disablePadding>
