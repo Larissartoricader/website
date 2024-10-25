@@ -33,13 +33,13 @@ export default function Navigation() {
       id: 3,
       name: "Project Management",
       url: "./marketing",
-      src: "/assets/Marketing.png",
+      src: "/assets/PM.jpg",
     },
     {
       id: 4,
       name: "Projects",
       url: "./marketing",
-      src: "/assets/Marketing.png",
+      src: "/assets/Projects.jpg",
     },
   ];
 

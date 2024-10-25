@@ -9,7 +9,7 @@ export const StyledDrawerContainer = styled.div`
 `;
 
 export const StyledBox = styled(Box)`
-  // position: relative;
+  position: relative;
   background: rgb(34, 0, 36);
   background: linear-gradient(
     51deg,
@@ -23,8 +23,8 @@ export const StyledCross = styled(ClearSharp)`
   background-color: white;
   border-radius: 50%;
   position: absolute;
-  right: 50px;‚
-  top: 20px;
+  right: 50px;
+  top: 30px;
   z-index: 10;
   cursor: pointer;
   &:hover {
@@ -62,7 +62,7 @@ export const StyledList = styled(List)`
 
 export const StyledListItemButton = styled(ListItemButton)`
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 800px;
+
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
