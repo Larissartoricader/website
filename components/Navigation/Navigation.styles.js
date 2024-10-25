@@ -4,9 +4,7 @@ import { ClearSharp } from "@mui/icons-material";
 import { Box, List, ListItemButton, ListItemText } from "@mui/material";
 import Image from "next/image";
 
-export const StyledDrawerContainer = styled.div`
-  max-width: auto;
-`;
+export const StyledDrawerContainer = styled.div``;
 
 export const StyledBox = styled(Box)`
   position: relative;
@@ -40,16 +38,17 @@ export const StyledImage = styled(Image)`
 
 export const StyledImageContainer = styled.div`
   position: absolute;
-  right: 100px;
-  top: -120px;
-  width: 50vw;
+  left: 0;
+  top: 0;
+  width: 50%;
   height: 100vh;
   overflow: hidden;
 `;
 
 export const StyledList = styled(List)`
-  left: 10px;
-  top: 10px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
   @media (min-width: 768px) {
     left: 50px;
     top: 50px;
