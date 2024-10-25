@@ -4,7 +4,12 @@ import { ClearSharp } from "@mui/icons-material";
 import { Box, List, ListItemButton, ListItemText } from "@mui/material";
 import Image from "next/image";
 
+export const StyledDrawerContainer = styled.div`
+  max-width: auto;
+`;
+
 export const StyledBox = styled(Box)`
+  // position: relative;
   background: rgb(34, 0, 36);
   background: linear-gradient(
     51deg,
@@ -18,34 +23,31 @@ export const StyledCross = styled(ClearSharp)`
   background-color: white;
   border-radius: 50%;
   position: absolute;
-  right: 50px;
+  right: 50px;‚
   top: 20px;
-  z-index: 1;
+  z-index: 10;
   cursor: pointer;
   &:hover {
     border: 1px solid #bc00ff;
   }
 `;
 
-export const StyledImageBox = styled.div`
-  display: flex;
-  justify-content: space-between;
+export const StyledImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
-export const StyledImage = styled(Image)`
+export const StyledImageContainer = styled.div`
   position: absolute;
-  display: none;
-  right: 0;
-  @media (min-width: 1024px) {
-    display: block;
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-  }
+  right: 100px;
+  top: -120px;
+  width: 50vw;
+  height: 100vh;
+  overflow: hidden;
 `;
 
 export const StyledList = styled(List)`
-  position: absolute;
   left: 10px;
   top: 10px;
   @media (min-width: 768px) {
@@ -59,12 +61,11 @@ export const StyledList = styled(List)`
 `;
 
 export const StyledListItemButton = styled(ListItemButton)`
-  display: inline-block;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+  width: 800px;
   &:hover {
-    transform: scale(1.05); /* Expande ligeiramente o item */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 `;
 
@@ -72,6 +73,7 @@ export const StyledListItemText = styled(ListItemText)`
   color: var(--primary-fontcolor);
   span {
     font-size: var(--font-size-large) !important;
+    max-width: auto;
   }
 `;
 

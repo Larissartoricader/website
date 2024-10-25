@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Navigation from "../Navigation/Navigation";
 import { HeaderContainer } from "./Header.styles";
-import LSClogo from "@/assets/LSClogo.png";
+import LSClogo from "@/public/assets/LSClogo.png";
 
 export default function Header() {
   return (
