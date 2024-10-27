@@ -39,7 +39,7 @@ export default function Navigation() {
       id: 4,
       name: "Projects",
       url: "./marketing",
-      src: "/assets/Projects.jpg",
+      src: "/assets/Project.jpg",
     },
   ];
 
@@ -82,17 +82,17 @@ export default function Navigation() {
             </ListItem>
           </div>
         ))}
-        <StyledImageContainer>
-          {hoveredMenuItem && (
-            <StyledImage
-              src={hoveredMenuItem.src}
-              alt={hoveredMenuItem.name}
-              width={1200}
-              height={1800}
-            />
-          )}
-        </StyledImageContainer>
       </StyledList>
+      <StyledImageContainer>
+        {hoveredMenuItem && (
+          <StyledImage
+            src={hoveredMenuItem.src}
+            alt={hoveredMenuItem.name}
+            width={1200}
+            height={1800}
+          />
+        )}
+      </StyledImageContainer>
     </StyledBox>
   );
 
