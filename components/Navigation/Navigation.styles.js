@@ -4,7 +4,10 @@ import { ClearSharp } from "@mui/icons-material";
 import { Box, List, ListItemButton, ListItemText } from "@mui/material";
 import Image from "next/image";
 
+export const StyledDrawerContainer = styled.div``;
+
 export const StyledBox = styled(Box)`
+  position: relative;
   background: rgb(34, 0, 36);
   background: linear-gradient(
     51deg,
@@ -14,57 +17,59 @@ export const StyledBox = styled(Box)`
 `;
 
 export const StyledCross = styled(ClearSharp)`
+  position: absolute;
+  right: 50px;
+  top: 30px;
   color: #bc00ff;
   background-color: white;
   border-radius: 50%;
-  position: absolute;
-  right: 50px;
-  top: 20px;
-  z-index: 1;
+  z-index: 10;
   cursor: pointer;
   &:hover {
     border: 1px solid #bc00ff;
   }
 `;
 
-export const StyledImageBox = styled.div`
-  display: flex;
-  justify-content: space-between;
+export const StyledImageContainer = styled.div`
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50%;
+  height: 100%;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const StyledImage = styled(Image)`
-  position: absolute;
-  display: none;
-  right: 0;
-  @media (min-width: 1024px) {
-    display: block;
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-  }
+  width: 100%;
+  height: 99%;
+  object-fit: cover;
+  object-position: right top;
 `;
 
 export const StyledList = styled(List)`
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 0px;
+  top: 0px;
+  left: 50px;
+  top: 50px;
   @media (min-width: 768px) {
-    left: 50px;
-    top: 50px;
+    left: 150px;
+    top: 150px;
   }
   @media (min-width: 1024px) {
-    left: 100px;
-    top: 100px;
+    left: 120px;
+    top: 120px;
   }
 `;
 
 export const StyledListItemButton = styled(ListItemButton)`
-  display: inline-block;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: scale(1.05); /* Expande ligeiramente o item */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 `;
 
@@ -72,6 +77,7 @@ export const StyledListItemText = styled(ListItemText)`
   color: var(--primary-fontcolor);
   span {
     font-size: var(--font-size-large) !important;
+    max-width: auto;
   }
 `;
 

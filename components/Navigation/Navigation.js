@@ -4,15 +4,16 @@ import { useState } from "react";
 import {
   StyledBox,
   StyledCross,
+  StyledDrawerContainer,
   StyledImage,
   StyledImageBox,
+  StyledImageContainer,
   StyledList,
   StyledListItemButton,
   StyledListItemText,
   StyledMenuIcon,
 } from "./Navigation.styles";
-import Marketing from "@/assets/Marketing.png";
-import Development from "@/assets/development.png";
+import Image from "next/image";
 
 export default function Navigation() {
   const NavigationMenuItems = [
@@ -20,29 +21,30 @@ export default function Navigation() {
       id: 1,
       name: "Marketing",
       url: "./marketing",
-      src: "../assets/Marketing.png",
+      src: "/assets/Marketing.png",
     },
     {
       id: 2,
       name: "Development",
       url: "./development",
-      src: "../assets/development.png",
+      src: "/assets/development.png",
     },
     {
       id: 3,
       name: "Project Management",
-      url: "./marketing",
-      src: "../assets/Marketing.png",
+      url: "./project-management",
+      src: "/assets/PM.jpg",
     },
     {
       id: 4,
       name: "Projects",
-      url: "./marketing",
-      src: "../assets/Marketing.png",
+      url: "./projects",
+      src: "/assets/Project.jpg",
     },
   ];
 
   const [open, setOpen] = useState(false);
+  const [hoveredMenuItem, setHoveredMenuItem] = useState(null);
   const router = useRouter();
 
   const toogleNavigation = (newOpen) => () => {
@@ -60,12 +62,15 @@ export default function Navigation() {
           toogleNavigation(false);
         }}
       />
-      <StyledImageBox>
-        <StyledImage src={Marketing} alt={"text"} />
 
-        <StyledList>
-          {NavigationMenuItems.map((menuItem) => (
-            <ListItem key={menuItem.id} disablePadding>
+      <StyledList>
+        {NavigationMenuItems.map((menuItem) => (
+          <div
+            key={menuItem.id}
+            onMouseEnter={() => setHoveredMenuItem(menuItem)}
+            onMouseLeave={() => setHoveredMenuItem(null)}
+          >
+            <ListItem disablePadding>
               <StyledListItemButton
                 onClick={() => {
                   router.push(menuItem.url);
@@ -75,18 +80,28 @@ export default function Navigation() {
                 <StyledListItemText primary={menuItem.name} />
               </StyledListItemButton>
             </ListItem>
-          ))}
-        </StyledList>
-      </StyledImageBox>
+          </div>
+        ))}
+      </StyledList>
+      <StyledImageContainer>
+        {hoveredMenuItem && (
+          <StyledImage
+            src={hoveredMenuItem.src}
+            alt={hoveredMenuItem.name}
+            width={1200}
+            height={1800}
+          />
+        )}
+      </StyledImageContainer>
     </StyledBox>
   );
 
   return (
-    <>
+    <StyledDrawerContainer>
       <StyledMenuIcon onClick={toogleNavigation(true)}>Open</StyledMenuIcon>
       <Drawer anchor={"right"} open={open} onClose={toogleNavigation(false)}>
         {NavigationList}
       </Drawer>
-    </>
+    </StyledDrawerContainer>
   );
 }

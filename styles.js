@@ -25,6 +25,7 @@ export default createGlobalStyle`
     font-size: var(--font-size-base);
     height: 100vh; 
    
+   
     
   }
 `;
