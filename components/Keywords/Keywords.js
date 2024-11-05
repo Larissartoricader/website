@@ -1,7 +1,7 @@
 import { useTransition } from "@react-spring/web";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { animated } from "@react-spring/web";
-import { KeywordsContainer } from "./Keywords.styles";
+import { KeywordsContainer, TransitionsItem } from "./Keywords.styles";
 
 const KeywordsListe = [
   "SEO",
@@ -12,6 +12,9 @@ const KeywordsListe = [
   "React",
   "Next.js",
   "TypeScript",
+  "Affiliate",
+  "Project Management",
+  "Mailing",
 ];
 
 export default function Keywords() {
@@ -19,12 +22,19 @@ export default function Keywords() {
   const [word, setWord] = useState([]);
   const transitions = useTransition(word, {
     from: {
-      scale: 1,
+      scale: 0.5,
       color: "#42f5d7",
     },
-    enter: [{ scale: 3, color: "#f542dd" }],
-    leave: [{ scale: 7, color: "#42f55d" }],
-    trail: 200,
+    enter: [
+      { scale: 0.6, color: "#f542dd" },
+      { scale: 0.7, color: "#f542dd" },
+      { scale: 0.8, color: "#f542dd" },
+      { scale: 0.9, color: "#f542dd" },
+      { scale: 1, color: "#f542dd" },
+    ],
+
+    leave: [{ scale: 1, color: "#42f55d" }],
+    trail: 0,
   });
 
   const reset = useCallback(() => {
@@ -39,20 +49,13 @@ export default function Keywords() {
   }, [reset]);
 
   return (
-    <KeywordsContainer>
+    <>
       <h2>Fusing Technical Expertise with Creative Content Creation</h2>
-      {transitions((style, item) => (
-        <animated.div
-          style={{
-            ...style,
-            display: "inline-block",
-            margin: "0 10px",
-            padding: "100px",
-          }}
-        >
-          {item}
-        </animated.div>
-      ))}
-    </KeywordsContainer>
+      <KeywordsContainer>
+        {transitions((style, item) => (
+          <TransitionsItem style={style}>{item}</TransitionsItem>
+        ))}
+      </KeywordsContainer>
+    </>
   );
 }
