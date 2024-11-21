@@ -1,7 +1,12 @@
 import { useTransition } from "@react-spring/web";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { animated } from "@react-spring/web";
-import { KeywordsContainer, TransitionsItem } from "./Keywords.styles";
+import {
+  KeywordsContainer,
+  KeywordsLayout,
+  StyledOpenSentence,
+  TransitionsItem,
+} from "./Keywords.styles";
 
 const KeywordsListe = [
   "SEO",
@@ -30,11 +35,13 @@ export default function Keywords() {
       { scale: 0.7, color: "#f542dd" },
       { scale: 0.8, color: "#f542dd" },
       { scale: 0.9, color: "#f542dd" },
-      { scale: 1, color: "#f542dd" },
+      { scale: 0.6, color: "#f542dd" },
+      { scale: 0.7, color: "#f542dd" },
+      { scale: 0.8, color: "#f542dd" },
+      { scale: 0.9, color: "#f542dd" },
     ],
 
-    leave: [{ scale: 1, color: "#42f55d" }],
-    trail: 0,
+    trail: 500,
   });
 
   const reset = useCallback(() => {
@@ -49,13 +56,15 @@ export default function Keywords() {
   }, [reset]);
 
   return (
-    <>
-      <h2>Fusing Technical Expertise with Creative Content Creation</h2>
+    <KeywordsLayout>
+      <StyledOpenSentence>
+        Fusing Technical Expertise with Creative Content Creation
+      </StyledOpenSentence>
       <KeywordsContainer>
         {transitions((style, item) => (
           <TransitionsItem style={style}>{item}</TransitionsItem>
         ))}
       </KeywordsContainer>
-    </>
+    </KeywordsLayout>
   );
 }

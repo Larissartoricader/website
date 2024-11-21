@@ -1,19 +1,28 @@
 import { animated } from "@react-spring/web";
 import styled from "styled-components";
 
-export const KeywordsMain = styled.div``;
+export const KeywordsLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+`;
+
+export const StyledOpenSentence = styled.h2`
+  color: yellow;
+  font-size: 2.5rem;
+`;
 
 export const TransitionsItem = styled(animated.div)`
-  border: solid 1px yellow;
   font-size: 2rem;
 `;
 
 export const KeywordsContainer = styled.div`
-  border: solid 5px red;
   margin-inline: 350px;
 
   display: flex;
-  gap: 10px;
+  gap: 20px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
