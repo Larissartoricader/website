@@ -10,8 +10,9 @@ export const KeywordsLayout = styled.div`
 `;
 
 export const StyledOpenSentence = styled.h2`
-  color: yellow;
+  color: var(--primary-fontcolor);
   font-size: 2.5rem;
+  text-align: center;
 `;
 
 export const TransitionsItem = styled(animated.div)`
