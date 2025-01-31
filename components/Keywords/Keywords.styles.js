@@ -6,7 +6,7 @@ export const KeywordsLayout = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
 `;
 
 export const StyledOpenSentence = styled.h2`
