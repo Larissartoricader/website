@@ -7,6 +7,7 @@ export const KeywordsLayout = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0px;
+  margin-bottom: 50px;
 `;
 
 export const StyledOpenSentence = styled.h2`

@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-export const ResumeContainer = styled.div`
-  @media (min-width: 768px) {
-  }
-`;
+export const ResumeContainer = styled.div``;
 
 export const ResumeHeadingBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-bottom: 50px;
 `;
 
 export const ResumeHeading = styled.div`
@@ -18,15 +15,22 @@ export const ResumeHeading = styled.div`
 
 export const ResumePictureTextBox = styled.div`
   display: flex;
-  // align-items: center;
+  align-items: center;
   justify-content: center;
   gap: 20px;
+  @media (max-width: 768px) {
+    gap: 10px;
+    flex-direction: column;
+  }
+  @media (min-width: 1024px) {
+    margin-inline: 50px;
+  }
 `;
 
 export const ResumeTextBox = styled.div`
-  width: 50%;
+  margin-inline: 20px;
 `;
 
-export const ResumeText = styled.p`
+export const ResumeText = styled.div`
   text-align: justify;
 `;
