@@ -28,17 +28,17 @@ export default function Keywords() {
   const transitions = useTransition(word, {
     from: {
       scale: 0.5,
-      color: "#42f5d7",
+      color: "#ffffff",
     },
     enter: [
-      { scale: 0.6, color: "#f542dd" },
-      { scale: 0.7, color: "#f542dd" },
-      { scale: 0.8, color: "#f542dd" },
-      { scale: 0.9, color: "#f542dd" },
-      { scale: 0.6, color: "#f542dd" },
-      { scale: 0.7, color: "#f542dd" },
-      { scale: 0.8, color: "#f542dd" },
-      { scale: 0.9, color: "#f542dd" },
+      { scale: 0.6, color: "#1b4e73" },
+      { scale: 0.7, color: "#1b4e73" },
+      { scale: 0.8, color: "#1b4e73" },
+      { scale: 0.9, color: "#1b4e73" },
+      { scale: 0.6, color: "#1b4e73" },
+      { scale: 0.7, color: "#1b4e73" },
+      { scale: 0.8, color: "#1b4e73" },
+      { scale: 0.9, color: "#1b4e73" },
     ],
 
     trail: 500,

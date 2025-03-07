@@ -8,11 +8,18 @@ export const StyledDrawerContainer = styled.div``;
 
 export const StyledBox = styled(Box)`
   position: relative;
-  background: rgb(34, 0, 36);
-  background: linear-gradient(
-    51deg,
-    rgba(34, 0, 36, 1) 75%,
-    rgba(188, 0, 255, 1) 100%
+  // background: rgb(34, 0, 36);
+  // background: linear-gradient(
+  //   51deg,
+  //   rgba(34, 0, 36, 1) 75%,
+  //   rgba(188, 0, 255, 1) 100%
+  // );
+  background-color: #e4b5cf;
+  background-image: linear-gradient(
+    225deg,
+    #e4b5cf 0%,
+    #784ba0 50%,
+    #2b86c5 100%
   );
 `;
 
@@ -65,12 +72,12 @@ export const StyledList = styled(List)`
 `;
 
 export const StyledListItemButton = styled(ListItemButton)`
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  // transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+  // &:hover {
+  //   transform: scale(1.05);
+  //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  // }
 `;
 
 export const StyledListItemText = styled(ListItemText)`
@@ -83,6 +90,11 @@ export const StyledListItemText = styled(ListItemText)`
 
 export const StyledMenuIcon = styled(MenuIcon)`
   color: White;
+  cursor: pointer;
+  &:hover {
+    color: #bc00ff;
+    transform: scale(1.3);
+  }
 `;
 export const NavText = styled.p`
   color: var(--primary-fontcolor);

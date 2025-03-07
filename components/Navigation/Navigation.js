@@ -98,7 +98,7 @@ export default function Navigation() {
 
   return (
     <StyledDrawerContainer>
-      <StyledMenuIcon onClick={toogleNavigation(true)}>Open</StyledMenuIcon>
+      <StyledMenuIcon onClick={toogleNavigation(true)} />
       <Drawer anchor={"right"} open={open} onClose={toogleNavigation(false)}>
         {NavigationList}
       </Drawer>
