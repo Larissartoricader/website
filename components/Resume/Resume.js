@@ -37,7 +37,7 @@ export default function Resume() {
             <p>
               In my Master’s studies, I delved into
               <strong>online content</strong>: how to write effectively and
-              present information in a way that captures users' attention within
+              present information in a way that captures users attention within
               seconds.
             </p>
 
