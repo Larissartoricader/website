@@ -19,8 +19,11 @@ export default createGlobalStyle`
   body {
     margin: 0;
     font-family: system-ui;
-    background: rgb(34,0,36);
-    background: linear-gradient(51deg, rgba(34,0,36,1) 75%, rgba(188,0,255,1) 100%);
+    // background: rgb(34,0,36);
+    // background: linear-gradient(51deg, rgba(34,0,36,1) 75%, rgba(188,0,255,1) 100%);
+    //  background: linear-gradient(51deg, rgba(34,0,36,1) 75%, rgba(188,0,255,1) 100%);
+background-color: #e4b5cf;
+background-image: linear-gradient(225deg, #e4b5cf 0%, #784BA0 50%, #2B86C5 100%);
     color: var(--primary-fontcolor);
     font-size: var(--font-size-base);
   
